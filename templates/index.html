@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GunFire Audio Classification</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="audio-design"></div>
+        <div class="container">
+            <h1>GunFire Audio Classification</h1>
+            <h3>You can upload your file of these classes:</h3>
+            <ul>
+                <li>38s_andws_dot38_caliber</li>
+                <li>glock_17_9mm_caliber</li>
+                <li>remington_870_12_gauge</li>
+                <li>ruger_ar_556_dot223_caliber</li>
+                
+            </ul>
+            
+            <!-- Add the link for users to download audio data -->
+            
+            <div class="upload-form">
+                <form method="post" action="/predict" enctype="multipart/form-data">
+                    <input type="file" name="file" accept=".wav" />
+                    <select name="class_label">
+                        <option value="38s_andws_dot38_caliber">38s_andws_dot38_caliber</option>
+                        <option value="glock_17_9mm_caliber">glock_17_9mm_caliber</option>
+                        <option value="remington_870_12_gauge">remington_870_12_gauge</option>
+                        <option value="ruger_ar_556_dot223_caliber">ruger_ar_556_dot223_caliber</option>
+                        
+                    </select>
+                    <button class="upload-btn" type="submit">Predict</button>
+                </form>
+                {% if prediction_text %}
+                    <p class="output-text">{{ prediction_text }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

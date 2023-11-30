@@ -1,0 +1,85 @@
+/* styles.css */
+
+/* Apply styles to the entire page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Apply styles to the background */
+.background {
+    background-image: url('./audio_image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Apply styles to the container */
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background: linear-gradient(to right, #FF512F, #DD2476);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+}
+
+
+/* Apply styles to the headings */
+h1 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+/* Apply styles to the unordered list */
+ul {
+    text-align: left;
+}
+
+/* Apply styles to the download link paragraph */
+p {
+    margin-top: 20px;
+}
+
+/* Additional styles for the upload form */
+.upload-form {
+    margin-top: 20px;
+}
+
+/* Style the file input and select dropdown */
+input[type="file"],
+select {
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Style the predict button */
+.upload-btn {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Style the output text */
+.output-text {
+    margin-top: 20px;
+    font-weight: bold;
+}
